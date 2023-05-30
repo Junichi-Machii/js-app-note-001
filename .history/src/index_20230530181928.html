@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>メモアプリ</title>
+    <link rel="stylesheet" href="./style.scss" />
+    <script defer src="./main.js"></script>
+  </head>
+  <body>
+    <div class="modal-container">
+      <div class="modal">
+        <button class="modal__btn">&times;</button>
+        <h2 class="modal__title">hello</h2>
+        <p class="modalbody">tekst</p>
+      </div>
+    </div>
+    <div class="form-container">
+      <h1>メモ</h1>
+      <h3>新しいメモ</h3>
+      <form>
+        <label for="title">題名
+          <input type="text" id="text" placeholder="タイトルを記入" />
+        </label>
+        <label for="note"
+          >内容
+          <textarea
+            name="note"
+            id="note"
+            cols="30"
+            rows="10"
+            placeholder="メモ内容を記入"
+          ></textarea>
+        </label>
+        <input type="submit">
+      </form>
+    </div>
+    <div class="note-container">
+
+      <div class="note">
+        <h2 class="note__title">sample note title</h2>
+        <p class="note__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat commodi optio iure ea hic nobis illo, aliquid totam architecto suscipit odio culpa alias fugit, perspiciatis eum qui sint. Distinctio, dolorum?</p>
+        <div class="note__btns">
+          <button class="note__btn note__view">view detail</button>
+          <button class="note__btn note__delete">delete</button>
+        </div>
+      </div>
+      <div class="note">
+        <h2 class="note__title">sample note title</h2>
+        <p class="note__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat commodi optio iure ea hic nobis illo, aliquid totam architecto suscipit odio culpa alias fugit, perspiciatis eum qui sint. Distinctio, dolorum?</p>
+        <div class="note__btns">
+          <button class="note__btn note__view">view detail</button>
+          <button class="note__btn note__delete">delete</button>
+        </div>
+      </div>
+      <div class="note">
+        <h2 class="note__title">sample note title</h2>
+        <p class="note__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat commodi optio iure ea hic nobis illo, aliquid totam architecto suscipit odio culpa alias fugit, perspiciatis eum qui sint. Distinctio, dolorum?</p>
+        <div class="note__btns">
+          <button class="note__btn note__view">詳細を表示</button>
+          <button class="note__btn note__delete">消去</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

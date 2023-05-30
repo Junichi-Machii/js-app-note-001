@@ -1,3 +1,221 @@
+@import "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Zen+Kurenaido&display=swap";
+*, :after, :before {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
 
+.modal-container {
+  opacity: 0;
+  pointer-events: none;
+  background-color: #12161433;
+  place-items: center;
+  transition: all .25s ease-out;
+  display: grid;
+  position: fixed;
+  inset: 0;
+}
+
+.modal-container.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-container .modal {
+  max-width: 700px;
+  max-height: 80vh;
+  background-color: #eee;
+  border: 2px solid #121614;
+  padding: 2rem;
+  position: relative;
+  overflow: auto;
+}
+
+.modal-container .modal__title {
+  max-width: 85%;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.modal-container .modal__btn {
+  color: #121614;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 2px solid #121614;
+  border-radius: 59%;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  transition: all .25s ease-out;
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  box-shadow: 3px 5px 8px 2px #12161433;
+}
+
+.modal-container .modal__btn:focus, .modal-container .modal__btn:hover {
+  color: #cbd2dc;
+  box-shadow: none;
+  border: 2px solid #cbd2dc;
+}
+
+body {
+  color: #121614;
+  place-items: end center;
+  padding: .7rem;
+  font-family: Lato, sans-serif;
+  display: grid;
+}
+
+input, textarea, select, button {
+  font-family: Zen Kurenaido, serif;
+}
+
+.form-container {
+  max-width: 1000px;
+  margin: 1rem auto;
+}
+
+.form-container h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.form-container h3 {
+  color: #419d5e;
+  text-align: center;
+}
+
+.form-container .message {
+  text-align: center;
+  color: #fff;
+  border-radius: .3rem;
+  margin: 1rem 0 1.5rem;
+  padding: .7rem;
+}
+
+.form-container .message.success-message {
+  background-color: #419d5e;
+  box-shadow: 2px 4px 7px 2px #419d5e33;
+}
+
+.form-container .message.remove-message {
+  background-color: #7faff7;
+  box-shadow: 2px 4px 7px 2px #7faff733;
+}
+
+.form-container .message.alert-message {
+  background-color: #f64747;
+  box-shadow: 2px 4px 7px 2px #f6474733;
+}
+
+form {
+  grid-gap: 1rem;
+  width: 100%;
+  margin: 1rem 0;
+  display: grid;
+}
+
+form label, form input, form textarea {
+  font-size: inherit;
+}
+
+form [for="title"], form [for="note"] {
+  grid-gap: 1.5rem;
+  background-color: #cbd2dc33;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem;
+  font-weight: bold;
+  display: flex;
+}
+
+form [for="title"] input, form [for="title"] textarea, form [for="note"] input, form [for="note"] textarea {
+  color: #121614;
+  width: 100%;
+  border: 2px solid #cbd2dc;
+  flex: 80%;
+  padding: .5rem;
+}
+
+form [for="title"] input:focus, form [for="title"] textarea:focus, form [for="note"] input:focus, form [for="note"] textarea:focus {
+  outline: 2px solid #121614;
+}
+
+form [type="submit"] {
+  color: #fff;
+  padding: .5re;
+  cursor: pointer;
+  background-color: #419d5e;
+  border: 3px solid #0000;
+  font-size: 1.3rem;
+  transition: all .25s ease-in-out;
+  box-shadow: 3px 5px 8px 2px #419d5e33;
+}
+
+form [type="submit"]:hover, form [type="submit"]:focus {
+  box-shadow: none;
+  border: 3px solid #12161480;
+  outline: none;
+}
+
+.note-container {
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 2rem auto 1rem;
+  display: grid;
+}
+
+.note-container .note {
+  border: 3px solid #7faff733;
+  padding: 1.5rem;
+  transition: all .25s ease-out;
+}
+
+.note-container .note__title {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.note-container .note__body {
+  max-height: 8rem;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
+.note-container .note__btns {
+  grid-gap: .5rem;
+  grid-template-columns: auto auto;
+  display: grid;
+}
+
+.note-container .note__btns .note__btn {
+  font-size: inherit;
+  color: wheat;
+  cursor: pointer;
+  margin-top: 1rem;
+  padding: .5rem 1rem;
+  transition: all .25s ease-out;
+}
+
+.note-container .note__btns .note__btn:focus, .note-container .note__btns .note__btn:hover {
+  box-shadow: none;
+}
+
+.note-container .note__btns .note__view {
+  background-color: #7faff7;
+  box-shadow: 3px 5px 8px 2px #7faff733;
+}
+
+.note-container .note__btns .note__delete {
+  background-color: #f64747;
+  box-shadow: 3px 5px 8px 2px #f6474733;
+}
 
 /*# sourceMappingURL=index.b2d9cf43.css.map */
