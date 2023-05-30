@@ -1,0 +1,12 @@
+{
+  "name": "js-app-note",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "par"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
