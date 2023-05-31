@@ -1,0 +1,57 @@
+const noteContainer = document.querySelector('.note-container');
+const modalContainer = document.querySelector('.modal-container');
+const form = document.querySelector('form');
+
+class Note {
+  constructor(title, body){
+    this.title = title;
+    this.body = body;
+    this.id = Math.random();
+ 
+  }
+}
+
+
+function addNoteToList(note){
+  const newUINote = document.createElement('div');
+  newUINote.classList.add('note');
+  newUINote.innerHTML = '
+  <span hidden>${note.id}</span>
+  <h2 class="note__title">${note.title}</h2>
+  <p class="note__body">${note.body}</p>
+  <div class="note__btns">
+    $layout-width-inner: 1200px;
+    
+    $breakpoints: (
+      //キー : 値
+      "sm": "(min-width: 480px)",
+      "md": "(min-width: 600px)",
+      "lg": "(min-width: 960px)",
+      "pc": "(min-width: #{$layout-width-inner})",
+    );
+    
+    //メディアクエリー
+    @mixin mq($breakpoint: md) {
+      @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+      }
+    }
+  </div>
+  '
+}
+
+
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const titleInput = document.querySelector('#title');
+  const noteInput = document.querySelector('#note');
+
+  if (titleInput.value.length > 0 && noteInput.value.length > 0) {
+    const newNote = new Note(titleInput.value, noteInput.value);
+    addNoteToList(newNote);
+    titleInput.value= '';
+    noteInput.value= '';
+    titleInput.focus();
+  }
+})
