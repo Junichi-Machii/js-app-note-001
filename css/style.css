@@ -209,3 +209,17 @@ form [type=submit]:hover, form [type=submit]:focus {
   background-color: #f64747;
   box-shadow: 3px 5px 8px 2px rgba(246, 71, 71, 0.2);
 }
+
+.header {
+  display: flex;
+}
+.header a {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+.header a img {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}

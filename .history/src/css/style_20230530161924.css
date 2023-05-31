@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Zen+Kurenaido&display=swap");
+*,
+*::after,
+*::before {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  display: grid;
+  place-items: end center;
+  padding: 2rem;
+  color: #121614;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: "Zen Kurenaido", serif;
+}
+
+.form-container {
+  max-width: 1000px;
+  margin: 1rem auto;
+}
+.form-container h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+.form-container h3 {
+  color: #98fab9;
+  text-align: center;
+}
+.form-container .message {
+  text-align: center;
+  margin: 1rem 0 1.5rem;
+  color: white;
+}

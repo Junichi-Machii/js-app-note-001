@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favicon.svg" />
+    <title>メモアプリ</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./main.js"></script>
+  </head>
+  <body>
+    <div class="modal-container">
+      <div class="modal">
+        <button class="modal__btn" tabindex="1">&times;</button>
+        <h2 class="modal__title">we</h2>
+        <p class="modal__body">weee</p>
+      </div>
+    </div>
+    <div class="form-container">
+      <a href="http://">
+        o
+      </a>
+      <h1>メモ帳</h1>
+
+      <form>
+        <label for="title"
+          >題名
+          <input type="text" id="title" placeholder="タイトルを記入" />
+        </label>
+        <label for="note"
+          >内容
+          <textarea
+            name="note"
+            id="note"
+            cols="30"
+            rows="10"
+            placeholder="メモ内容を記入"
+          ></textarea>
+        </label>
+        <input type="submit" />
+      </form>
+    </div>
+    <div class="note-container"></div>
+  </body>
+</html>
